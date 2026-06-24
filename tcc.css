@@ -1,0 +1,248 @@
+/* --- PALETA DE CORES E ESTÉTICA VERDE --- */
+:root {
+    --primary-color: #2e7d32; /* Verde Ecológico */
+    --secondary-color: #00838f; /* Azul Água/Saneamento */
+    --background-color: #f1f8e9; /* Verde bem claro, refrescante */
+    --card-color: #ffffff;
+    --text-color: #263238; /* Grafite escuro para melhor leitura */
+    --accent-green: #81c784;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(135deg, #f1f8e9 25%, #e8f5e9 100%);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.container {
+    width: 100%;
+    max-width: 850px;
+    background: var(--card-color);
+    padding: 35px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(46, 125, 50, 0.15);
+    border-top: 6px solid var(--primary-color);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    text-align: center;
+    font-weight: 700;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #37474f;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #c8e6c9;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    background-color: #fafafa;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    background-color: #fff;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    margin-top: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+button:hover {
+    background-color: #1b5e20;
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background-color: #006064;
+}
+
+/* --- PAINEL PRINCIPAL E ABAS --- */
+.nav-tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid #e0e0e0;
+    margin-bottom: 25px;
+    gap: 5px;
+}
+
+.tab-btn {
+    background: none;
+    color: #555;
+    border: none;
+    padding: 12px 10px;
+    font-size: 14px;
+    font-weight: 600;
+    width: auto;
+    cursor: pointer;
+    transition: all 0.2s;
+    border-radius: 8px 8px 0 0;
+}
+
+.tab-btn:hover {
+    background-color: #f1f8e9;
+    color: var(--primary-color);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    border-bottom: 4px solid var(--primary-color);
+    background-color: #e8f5e9;
+}
+
+/* Chat Estilo Limpo/Ambiental */
+.chat-box {
+    background: #f1f8e9;
+    border: 2px solid #c8e6c9;
+    height: 300px;
+    border-radius: 10px;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.message {
+    padding: 12px;
+    border-radius: 12px;
+    max-width: 75%;
+    line-height: 1.4;
+}
+
+.message.received {
+    background: white;
+    align-self: flex-start;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.message.sent {
+    background: #c8e6c9;
+    color: #1b5e20;
+    align-self: flex-end;
+    box-shadow: 0 2px 4px rgba(46,125,50,0.1);
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 12px;
+    border: 2px solid #c8e6c9;
+    border-radius: 8px;
+}
+
+.chat-input-area button {
+    width: auto;
+    margin: 0;
+    padding: 0 20px;
+}
+
+/* Estatísticas e Cards Temáticos */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.stat-card {
+    background: #e0f2f1;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border-left: 6px solid var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+}
+
+.notice-board {
+    background: #fff8e1;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 6px solid #ffb300;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+}
+
+/* Detalhe de Progresso de Saneamento */
+.progress-container {
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    margin-top: 10px;
+    height: 12px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+}
+
+.progress-bar.blue {
+    background-color: var(--secondary-color);
+}
+
+/* Lista de itens genérica */
+.item-list {
+    list-style: none;
+    padding: 0;
+}
+
+.item-list li {
+    background: #fbfbfb;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    border-left: 4px solid var(--accent-green);
+    margin-bottom: 10px;
+    border-radius: 6px;
+}
